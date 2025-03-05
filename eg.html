@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <p id="display">0</p>
+    <p>
+        <button onclick="updateCalculation('1')">1</button>
+        <button onclick="updateCalculation('2')">2</button>
+        <button onclick="updateCalculation('3')">3</button>
+        <button onclick="updateCalculation('+')">+</button>
+        <button onclick="calculateResult()">=</button>
+    </p>
+    <script>
+        let calculation = "";
+
+        function updateCalculation(value) {
+            calculation += value;
+            console.log(calculation);
+            document.getElementById("display").innerText = calculation;
+        }
+
+        function calculateResult() {
+            try {
+                calculation = eval(calculation).toString();
+                console.log(calculation);
+                document.getElementById("display").innerText = calculation;
+            } catch (error) {
+                console.error("Invalid calculation");
+                document.getElementById("display").innerText = "Error";
+            }
+        }
+    </script>
+</body>
+</html>
