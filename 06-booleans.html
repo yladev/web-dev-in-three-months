@@ -61,15 +61,33 @@
         console.log(variable1); // variable doesn't have value
         */
 
-        const result = 0 ? 'truthy' : 'falsy';
+        /* Shortcuts for If-Statements
+           - Ternary Operator ? : 
+           - Guard Operator &&
+           - Default Operator ||
+        */
+        // Ternary Operator
+        // (condition) ? x : y
+        const result = true ? 'truthy' : 'falsy';
         console.log(result);
         
+        const res = 0 ? 'truthy' : 'falsy';
+        console.log(res);
+        
+        // AND Operator &&
+        // false && value2
+        // - Stops early
+        // - Doesn't need to run the code on the right
         false && console.log('hello');
         
         const message = 5 && 'hello';
         console.log(message);
-
-        const currency = undefined || 'USD';
+        
+        // OR Operator ||
+        // value1 || value2
+        // - checks if at least 1 side is truthy
+        // - stops early (short-circuits)
+        const currency = 'EUR' || 'USD';
         console.log(currency);
         
         
