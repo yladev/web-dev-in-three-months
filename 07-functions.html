@@ -7,12 +7,25 @@
 </head>
 <body>
     <script>
-        function function1() {
+        /* function function1() {
             console.log('hello');
             console.log(2 + 2);
         }
 
-        function1(); // Calling the function
+        function1(); */ // Calling the function
+
+        // function with parameters
+        function calculateTax(num1, num2) {
+            console.log(num1 + num2);
+        }  
+        calculateTax(10, 20);
+
+        function calculateTax2(cost, taxPercent = 0.1) {
+            console.log(cost * taxPercent);
+            
+        }
+        calculateTax2(2000, 0.2);
+        calculateTax2(5000);
     </script>
 </body>
 </html>
